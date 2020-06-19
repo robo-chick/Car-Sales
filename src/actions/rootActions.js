@@ -3,12 +3,16 @@ export const SUBTRACT_FEATURE = "SUBTRACT_FEATURE";
 
 export const addFeature = (feature) => {
     // action object
-    return {type: ADD_FEATURE, payload: feature};
+    return {
+        type: ADD_FEATURE, 
+        payload: feature};
 };
 
 export const subtractFeature = (feature) => {
     // action object
-    return {type: SUBTRACT_FEATURE, payload: feature};
+    return {
+        type: SUBTRACT_FEATURE, 
+        payload: feature};
 };
 
 
