@@ -9,7 +9,7 @@ const initialState = {
     image:
       'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
 
-    features: [],
+    features: []
   },
   additionalFeatures: [
     { id: 1, name: 'V-6 engine', price: 1500 },
@@ -20,6 +20,7 @@ const initialState = {
 };
 
 export const rootReducer = (state = initialState, action) => {
+    console.log(action.payload);
   switch (action.type) {
     
     case ADD_FEATURE:
@@ -44,11 +45,9 @@ export const rootReducer = (state = initialState, action) => {
 
         car: {
           ...state.car,
-          features: [
-            ...state.car.features.filter(
+          features: state.car.features.filter(
               feature => feature.id !== action.payload.id
-            ),
-          ],
+            ), 
         },
       };
 

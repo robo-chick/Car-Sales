@@ -6,14 +6,14 @@ import {useDispatch} from 'react-redux';
 const AddedFeature = props => {
   const dispatch = useDispatch();
 
-  const handleSubtractFeature = () => {
-    dispatch(subtractFeature(props.feature));
+  const handleSubtractFeature = (feature) => {
+    dispatch(subtractFeature(feature));
   }
 
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick={(handleSubtractFeature)}>X</button>
+      <button className="button" onClick={() => handleSubtractFeature(props.feature)}>X</button>
       {props.feature.name}
     </li>
   );

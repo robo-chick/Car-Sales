@@ -25,6 +25,6 @@ const Header = () => {
 //   };
 // }
 
-// export default connect(mapStateToProps, {})(Header);
+// export default connect(mapStateToProps)(Header);
 
 export default Header;

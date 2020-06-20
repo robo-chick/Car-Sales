@@ -30,6 +30,6 @@ const AdditionalFeatures = () => {
 //   };
 // };
 
-// export default connect(mapStateToProps,{})(AdditionalFeatures);
+// export default connect(mapStateToProps)(AdditionalFeatures);
 
 export default AdditionalFeatures;
